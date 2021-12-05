@@ -5,6 +5,15 @@
  Observe que el conjunto de soluciones no debe contener números triples duplicados.
  */
 
+/* Solución:
+ Se trabaja con dos arreglos: ambos serán generados al cumplir las condiciones:
+  * i != j, i != k, y j != k 
+  * nums [i] + nums [j] + nums [k] == 0 
+ pero un array guardará los índices y el otro array guardará el elemento, esto servirá para poder evaluar que los índices no se repitan 
+ y también evaluar que los tres elementos juntos no estén repetidos en el resultado (de lo contrario se generan muchos array iguales en diferente orden).
+
+*/
+
 function evaluarGrupos(nums){
     var indices = [];
     var resultado = [];
